@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+.split-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(240,248,255,0.6) 30%, rgba(230,240,255,1) 100%);
+}
+
+.left-side {
+  position: relative;
+  flex: 1;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+}
+
+.left-side video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2.4em;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
+              0 4px 6px rgba(255, 255, 255, 0.3); /* 光の浮き感 */
+  max-width: 420px;
+  width: 90%;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeInUp 1.0s ease-out forwards;
+
+  @media screen and (min-width: 768px) {
+  .glass-card {
+    margin-left: -40px; /* 👈 PCのみで少し左寄せ */
+  }
+}
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  padding: 12px 36px;
+  font-size: 1rem;
+  border-radius: 999px; /* pill型（卵型） */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(118, 75, 162, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 50vh;
+    clip-path: none;
+  }
+
+  .left-side video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: none;
+  }
+
+  .right-side {
+    height: auto;
+    padding: 30px 16px;
+    justify-content: center;
+    background: linear-gradient(to bottom, #eaf4ff, #f7fbff);
+    box-shadow: none;
+  }
+
+  .glass-card {
+    padding: 24px;
+    max-width: 90%;
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
+  .glass-card {
+  text-align: center; /* 👈 追加：中身を中央揃え */
+}
+
+button {
+  display: inline-block; /* 👈 追加：ボタンを中央に揃えるために必要 */
+  margin-top: 16px;
+}
+}
+
