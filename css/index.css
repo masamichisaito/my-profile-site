@@ -26,6 +26,16 @@ body, html {
   z-index: 0;
 }
 
+.group-impact {
+  font-weight: 800;
+  font-size: 1.4em;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
 .overlay-text {
   position: absolute;
   top: 50%;

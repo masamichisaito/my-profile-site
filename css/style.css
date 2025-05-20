@@ -11,6 +11,16 @@ body, html {
   overflow: hidden;
 }
 
+.arch-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  text-align: center;
+  margin-top: 40px;
+}
+
 video {
   position: absolute;
   top: 0;
