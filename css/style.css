@@ -7,18 +7,41 @@ body, html {
 
 .video-container {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;          /* ← 100vh → auto に変更！ */
+  overflow: visible;     /* ← 必要に応じて visible に */
 }
 
-.arch-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
+.arch-container {
+  background: linear-gradient(135deg, #5e60ce, #6930c3);
+  border-radius: 999px 999px 0 0;
+  padding: 20px 40px;
   text-align: center;
-  margin-top: 40px;
+  width: fit-content;
+  margin: auto;
+}
+
+h1 {
+  position: relative;
+  color: #ff7c09;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  padding: 0;
+  text-align: center;
+  margin: 2.5em 0 1.5em; /* ⬅️ 上の余白をもう少しだけ拡大 */
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -35px;              /* ⬅️ 円弧をさらに文字から離す */
+  left: 50%;
+  width: 340px;            /* ⬅️ 円の横幅を拡大（280→340） */
+  height: 110px;           /* ⬅️ 円の高さも拡大（80→110） */
+  border-radius: 50%;
+  border: 6px solid #e45d5d; /* ⬅️ 線の太さも5→6pxに */
+  border-left-color: transparent;
+  border-right-color: transparent;
+  transform: translateX(-50%);
 }
 
 video {
@@ -27,7 +50,8 @@ video {
   left: 0;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 100%; /* ← これだと縮まないので… */
+  min-height: 100%; /* or remove it entirely if needed */
   z-index: -1;
 }
 
@@ -55,9 +79,11 @@ video {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 20px;
   max-width: 500px;
   margin: 0 auto;
+  padding: 28px;         /* ← 少し余白を持たせて呼吸感 */
+  max-width: 560px;      /* ← 少し幅広に */
+  font-size: 1.05rem;
 }
 
 .member-content {
@@ -67,8 +93,8 @@ video {
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -93,7 +119,7 @@ video {
   font-size: 0.9rem;
   border: none;
   border-radius: 999px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #d05b0d, #f10505);
   color: white;
   text-decoration: none;
   cursor: pointer;

@@ -29,7 +29,7 @@ body, html {
 .group-impact {
   font-weight: 800;
   font-size: 1.4em;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #d05b0d, #f10505);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -87,7 +87,7 @@ button {
   padding: 12px 36px;
   font-size: 1rem;
   border-radius: 999px; /* pill型（卵型） */
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #d05b0d, #f10505);
   color: white;
   border: none;
   cursor: pointer;

@@ -133,7 +133,6 @@ video {
   border-radius: 3px;
 }
 
-
 /* === 詳細ページ用 === */
 .profile-wrapper {
   background: #fff;
@@ -191,7 +190,7 @@ video {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 24px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #d05b0d, #f10505);;
   color: white;
   border-radius: 999px;
   text-decoration: none;
