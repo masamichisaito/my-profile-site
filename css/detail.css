@@ -120,7 +120,7 @@ video {
 .section h3 {
   background: #f6f8fa;
   padding: 4px 12px;
-  border-left: 4px solid #ff0000;
+  border-left: 4px solid #a24b4b;
   border-radius: 6px;
 }
 
@@ -153,8 +153,8 @@ video {
 }
 
 .header .avatar {
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
 }
 
 .section h3 {
