@@ -22,7 +22,7 @@ body, html {
 
 h1 {
   position: relative;
-  color: #ff7c09;
+  color: #fb7500;
   font-size: 2.4rem;
   line-height: 1.2;
   padding: 0;
@@ -38,7 +38,7 @@ h1::before {
   width: 340px;            /* ⬅️ 円の横幅を拡大（280→340） */
   height: 110px;           /* ⬅️ 円の高さも拡大（80→110） */
   border-radius: 50%;
-  border: 6px solid #e45d5d; /* ⬅️ 線の太さも5→6pxに */
+  border: 6px solid #e29090; /* ⬅️ 線の太さも5→6pxに */
   border-left-color: transparent;
   border-right-color: transparent;
   transform: translateX(-50%);
@@ -130,3 +130,36 @@ video {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
 }
+
+ /* レスポンシブ対応 */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+        margin: 2em 0 1em;
+      }
+
+      h1::before {
+        width: 260px;
+        height: 80px;
+        top: -30px;
+      }
+
+      .members-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .member-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .avatar {
+        width: 90px;
+        height: 90px;
+      }
+
+      .detail-btn {
+        align-self: center;
+      }
+    }
